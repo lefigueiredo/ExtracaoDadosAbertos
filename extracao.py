@@ -3,6 +3,8 @@ import urllib.request       #Bibliteca que baixa os itens da web
 import time         #Bibliotea que gerencia tempo
 from bs4 import BeautifulSoup           #Biblioteca que torna legivel o codigo fonte do site
 
+''' Importante informar que o download é feito na pasta em que o arquivo .py se encontra'''
+
 html = requests.get('http://portal.inep.gov.br/microdados')     #Site para vasculhar o codigo fonte
 soup = BeautifulSoup(html.text, "html.parser")         # Puxa os dados do codigo fonte e deixa legivel
 
